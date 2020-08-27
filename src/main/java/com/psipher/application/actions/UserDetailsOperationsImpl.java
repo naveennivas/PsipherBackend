@@ -34,6 +34,10 @@ public class UserDetailsOperationsImpl implements UserDetailsOperations {
         // TODO Currently UserId is coming as input once frontend is ready then we accept token from header
         // TODO After getting auth token we make call to Cognito to get the UserName/ID
         String status;
+        //check wthr the use acc has been pawned
+        //if yes then set the status and return status from here
+
+        //have to check weather thr user has entered the same pass that has been leaked
         try {
             UserDDBModel userDDBModel = viewDetails(userId);
             if (userDDBModel != null) {
@@ -59,6 +63,7 @@ public class UserDetailsOperationsImpl implements UserDetailsOperations {
             logger.error(String.format("Failed to load data for userId:%s error:%s", userId, e.getMessage()));
             throw new DDBException(String.format("Failed to load data for userId:%s", userId));
         }
+
         return userDDBModel;
     }
 

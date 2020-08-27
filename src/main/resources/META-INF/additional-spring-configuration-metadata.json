@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "pwnedpasswords4j.user_agent",
+      "type": "java.lang.String",
+      "description": "Description for pawnedpasswords4j.user_agent."
+  }
+] }
